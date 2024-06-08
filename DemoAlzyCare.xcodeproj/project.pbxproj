@@ -38,6 +38,7 @@
 		0824046D2C12270C00252472 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0824046C2C12270C00252472 /* PlannerCollectionViewCell.swift */; };
 		082404922C12DECD00252472 /* PlannerDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082404912C12DECD00252472 /* PlannerDataController.swift */; };
 		082404942C12ECA600252472 /* PhotographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082404932C12ECA600252472 /* PhotographyViewController.swift */; };
+		08B3704D2C1425B7005C07F4 /* PuzzleNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */; };
 		B072F03D2C11C1970027F277 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F03C2C11C1970027F277 /* ResultViewController.swift */; };
 		B072F03F2C11C1CD0027F277 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F03E2C11C1CD0027F277 /* CircularProgressView.swift */; };
 		B072F0412C11C7880027F277 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F0402C11C7880027F277 /* AssessmentViewController.swift */; };
@@ -92,6 +93,7 @@
 		0824046C2C12270C00252472 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		082404912C12DECD00252472 /* PlannerDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerDataController.swift; sourceTree = "<group>"; };
 		082404932C12ECA600252472 /* PhotographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographyViewController.swift; sourceTree = "<group>"; };
+		08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleNormalViewController.swift; sourceTree = "<group>"; };
 		B072F03C2C11C1970027F277 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B072F03E2C11C1CD0027F277 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B072F0402C11C7880027F277 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		05D3B00A2C0D91C6003E1ADE = {
 			isa = PBXGroup;
 			children = (
+				08B3704B2C142586005C07F4 /* GamesViewController */,
 				05D3B0152C0D91C6003E1ADE /* DemoAlzyCare */,
 				05D3B0142C0D91C6003E1ADE /* Products */,
 			);
@@ -232,6 +235,14 @@
 				0824046C2C12270C00252472 /* PlannerCollectionViewCell.swift */,
 			);
 			path = Planner;
+			sourceTree = "<group>";
+		};
+		08B3704B2C142586005C07F4 /* GamesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */,
+			);
+			path = GamesViewController;
 			sourceTree = "<group>";
 		};
 		B0FC225C2C11DDDC00A61A0A /* Onboarding */ = {
@@ -353,6 +364,7 @@
 				B072F03D2C11C1970027F277 /* ResultViewController.swift in Sources */,
 				082404922C12DECD00252472 /* PlannerDataController.swift in Sources */,
 				05CE64EE2C0DD0E900DBE0DF /* SampleDataModel.swift in Sources */,
+				08B3704D2C1425B7005C07F4 /* PuzzleNormalViewController.swift in Sources */,
 				05CE64F22C0DD15D00DBE0DF /* SampleViewController.swift in Sources */,
 				B0FC225B2C11DCF000A61A0A /* OnboardingContentViewController.swift in Sources */,
 				0824046D2C12270C00252472 /* PlannerCollectionViewCell.swift in Sources */,
