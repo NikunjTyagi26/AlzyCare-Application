@@ -58,6 +58,7 @@
 		B0FC22712C11ECC300A61A0A /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC22702C11ECC300A61A0A /* NoteViewController.swift */; };
 		F4483A252C125CB600099A06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4483A242C125CB600099A06 /* ProfileViewController.swift */; };
 		F470F4C82C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */; };
+		F470F4D22C14635300E3B9AB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F470F4D12C14635300E3B9AB /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		B0FC22702C11ECC300A61A0A /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F4483A242C125CB600099A06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAlzheimerViewController.swift; sourceTree = "<group>"; };
+		F470F4D12C14635300E3B9AB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				05D3B0162C0D91C6003E1ADE /* AppDelegate.swift */,
 				05D3B0182C0D91C6003E1ADE /* SceneDelegate.swift */,
+				F470F4D12C14635300E3B9AB /* Login.storyboard */,
 				05D3B01C2C0D91C6003E1ADE /* Main.storyboard */,
 				B0FC22562C11DBE100A61A0A /* HomeScreen.storyboard */,
 				05D3B03E2C0D9CF6003E1ADE /* Suggested.xib */,
@@ -325,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F470F4D22C14635300E3B9AB /* Login.storyboard in Resources */,
 				B0FC22632C11E98F00A61A0A /* Diary.storyboard in Resources */,
 				05D3B0452C0D9DEE003E1ADE /* Assessment.storyboard in Resources */,
 				055833442C0DB81A00C14EE9 /* Planner.storyboard in Resources */,
