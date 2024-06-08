@@ -57,6 +57,7 @@
 		B0FC226F2C11ECAE00A61A0A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC226E2C11ECAE00A61A0A /* EntryViewController.swift */; };
 		B0FC22712C11ECC300A61A0A /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC22702C11ECC300A61A0A /* NoteViewController.swift */; };
 		F4483A252C125CB600099A06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4483A242C125CB600099A06 /* ProfileViewController.swift */; };
+		F470F4C82C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		B0FC226E2C11ECAE00A61A0A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		B0FC22702C11ECC300A61A0A /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		F4483A242C125CB600099A06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAlzheimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */,
+				F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */,
 			);
 			path = GamesViewController;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				B0FC22522C11CFA100A61A0A /* MeditationViewController.swift in Sources */,
 				B072F03D2C11C1970027F277 /* ResultViewController.swift in Sources */,
 				082404922C12DECD00252472 /* PlannerDataController.swift in Sources */,
+				F470F4C82C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift in Sources */,
 				05CE64EE2C0DD0E900DBE0DF /* SampleDataModel.swift in Sources */,
 				08B3704D2C1425B7005C07F4 /* PuzzleNormalViewController.swift in Sources */,
 				05CE64F22C0DD15D00DBE0DF /* SampleViewController.swift in Sources */,
