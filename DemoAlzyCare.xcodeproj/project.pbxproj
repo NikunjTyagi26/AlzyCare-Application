@@ -39,6 +39,7 @@
 		082404922C12DECD00252472 /* PlannerDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082404912C12DECD00252472 /* PlannerDataController.swift */; };
 		082404942C12ECA600252472 /* PhotographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082404932C12ECA600252472 /* PhotographyViewController.swift */; };
 		08B3704D2C1425B7005C07F4 /* PuzzleNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */; };
+		08B3704F2C14463F005C07F4 /* demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3704E2C14463F005C07F4 /* demo.swift */; };
 		B072F03D2C11C1970027F277 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F03C2C11C1970027F277 /* ResultViewController.swift */; };
 		B072F03F2C11C1CD0027F277 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F03E2C11C1CD0027F277 /* CircularProgressView.swift */; };
 		B072F0412C11C7880027F277 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072F0402C11C7880027F277 /* AssessmentViewController.swift */; };
@@ -94,6 +95,7 @@
 		082404912C12DECD00252472 /* PlannerDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerDataController.swift; sourceTree = "<group>"; };
 		082404932C12ECA600252472 /* PhotographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographyViewController.swift; sourceTree = "<group>"; };
 		08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleNormalViewController.swift; sourceTree = "<group>"; };
+		08B3704E2C14463F005C07F4 /* demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demo.swift; sourceTree = "<group>"; };
 		B072F03C2C11C1970027F277 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B072F03E2C11C1CD0027F277 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B072F0402C11C7880027F277 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */,
+				08B3704E2C14463F005C07F4 /* demo.swift */,
 			);
 			path = GamesViewController;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				0558334B2C0DB89B00C14EE9 /* EventTableViewCell.swift in Sources */,
 				0558334D2C0DB8CE00C14EE9 /* EventsListViewController.swift in Sources */,
+				08B3704F2C14463F005C07F4 /* demo.swift in Sources */,
 				B0FC22502C11CF6800A61A0A /* CircularProgressView1.swift in Sources */,
 				055833472C0DB85300C14EE9 /* EventManager.swift in Sources */,
 				082404942C12ECA600252472 /* PhotographyViewController.swift in Sources */,
