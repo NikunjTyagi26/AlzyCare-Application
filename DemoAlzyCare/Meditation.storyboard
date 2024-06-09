@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k5L-sP-j8e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jkr-ej-zPO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -8,45 +8,45 @@
     </dependencies>
     <scenes>
         <!--Meditation-->
-        <scene sceneID="TJ6-qe-2c8">
+        <scene sceneID="vSS-ss-0T3">
             <objects>
-                <viewController id="k5L-sP-j8e" customClass="MeditationViewController" customModule="DemoAlzyCare" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Iqf-6c-0FP">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-t6-mka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController hidesBottomBarWhenPushed="YES" id="Jkr-ej-zPO" customClass="MeditationViewController" customModule="DemoAlzyCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qHE-P6-k5E">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shape1" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-Mk-p07">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shape1" translatesAutoresizingMaskIntoConstraints="NO" id="rhw-oF-XTJ">
                                 <rect key="frame" x="-76" y="628" width="479" height="283"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shape1" translatesAutoresizingMaskIntoConstraints="NO" id="s2Y-28-hrL">
-                                <rect key="frame" x="-86" y="-30" width="373" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-aU-ugh" customClass="CircularProgressView1" customModule="DemoAlzyCare" customModuleProvider="target">
+                            <view contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WO1-C6-i4R" customClass="CircularProgressView1" customModule="DemoAlzyCare" customModuleProvider="target">
                                 <rect key="frame" x="76" y="306" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-2u-2OB">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meditation" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-M5-SwA">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.76862752440000004" green="0.70980393890000004" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.92156863209999995" green="0.91372549530000002" blue="0.94901967050000002" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="oHS-RZ-yOW">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-Ov-rBu">
                                 <rect key="frame" x="20" y="77.333333333333343" width="353" height="26.333333333333329"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58e-Bm-nu9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuL-vz-Jwf">
                                 <rect key="frame" x="134" y="678" width="124" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Pause"/>
                                 <connections>
-                                    <action selector="pauseButtonTapped:" destination="k5L-sP-j8e" eventType="touchUpInside" id="Ymz-Sm-cCL"/>
+                                    <action selector="pauseButtonTapped:" destination="Jkr-ej-zPO" eventType="touchUpInside" id="Dea-Tc-FmB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBZ-ef-1mr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-aK-8wl">
                                 <rect key="frame" x="283" y="678" width="82.666666666666657" height="47.666666666666664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.50980395079999996" green="0.38431376220000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -55,17 +55,17 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="stopButtonTapped:" destination="k5L-sP-j8e" eventType="touchUpInside" id="8Xh-ku-aJa"/>
+                                    <action selector="stopButtonTapped:" destination="Jkr-ej-zPO" eventType="touchUpInside" id="iOr-5S-iNF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eh-mf-HsG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhJ-FL-Ou2">
                                 <rect key="frame" x="92" y="572" width="209" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afE-Nn-MCr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Music:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-Q8-EFg">
                                 <rect key="frame" x="16" y="198" width="111" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,11 +73,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-ne-IVi">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkq-9L-Ze1">
                                 <rect key="frame" x="180" y="77" width="197" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQX-vl-SAo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f6-wY-OD2">
                                 <rect key="frame" x="16" y="124" width="129" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,51 +85,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-IW-jlQ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-Zs-nHj">
                                 <rect key="frame" x="20" y="678" width="82.666666666666671" height="47.666666666666664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.50980395079999996" green="0.3803921938" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButtonTapped:" destination="k5L-sP-j8e" eventType="touchUpInside" id="RkE-Jr-l30"/>
+                                    <action selector="startButtonTapped:" destination="Jkr-ej-zPO" eventType="touchUpInside" id="Oiu-Wc-aPY"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zzn-Lh-hI1">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-Lu-ijJ">
                                 <rect key="frame" x="172" y="173" width="212" height="112"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="8RI-g2-Dfb"/>
-                        <color key="backgroundColor" red="0.76862752440000004" green="0.70980393890000004" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="7Gr-BD-CJC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.90196078430000004" green="1" blue="0.64857349193401359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oHS-RZ-yOW" firstAttribute="top" secondItem="8RI-g2-Dfb" secondAttribute="top" multiplier="3:4" id="VGh-13-nMp"/>
-                            <constraint firstItem="oHS-RZ-yOW" firstAttribute="leading" secondItem="8RI-g2-Dfb" secondAttribute="leading" constant="20" id="nyR-NL-HAv"/>
-                            <constraint firstItem="8RI-g2-Dfb" firstAttribute="trailing" secondItem="oHS-RZ-yOW" secondAttribute="trailing" constant="20" id="ubw-oj-lRe"/>
+                            <constraint firstItem="jWq-Ov-rBu" firstAttribute="leading" secondItem="7Gr-BD-CJC" secondAttribute="leading" constant="20" id="7tf-sD-Yqr"/>
+                            <constraint firstItem="7Gr-BD-CJC" firstAttribute="trailing" secondItem="jWq-Ov-rBu" secondAttribute="trailing" constant="20" id="EPR-Km-wmg"/>
+                            <constraint firstItem="jWq-Ov-rBu" firstAttribute="top" secondItem="7Gr-BD-CJC" secondAttribute="top" multiplier="3:4" id="nLc-FE-BbP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Meditation" id="JH2-m8-OKh"/>
+                    <navigationItem key="navigationItem" title="Meditation" id="HTp-9K-J7Z"/>
                     <connections>
-                        <outlet property="backgroundSoundPicker" destination="Zzn-Lh-hI1" id="Ksc-qA-KUl"/>
-                        <outlet property="durationPicker" destination="lPJ-ne-IVi" id="vjr-AB-L3G"/>
-                        <outlet property="pauseButton" destination="58e-Bm-nu9" id="JV8-R4-4AG"/>
-                        <outlet property="progressView" destination="Hf0-aU-ugh" id="2fd-aR-3an"/>
-                        <outlet property="setMusicLabel" destination="afE-Nn-MCr" id="3Vb-xH-YVE"/>
-                        <outlet property="setTimeLabel" destination="nQX-vl-SAo" id="cpe-sp-4VR"/>
-                        <outlet property="startButton" destination="5jg-IW-jlQ" id="ejl-pV-JwV"/>
-                        <outlet property="stopButton" destination="oBZ-ef-1mr" id="Q19-c4-C1q"/>
-                        <outlet property="timeLabel" destination="9Eh-mf-HsG" id="2K4-6L-UPt"/>
+                        <outlet property="backgroundSoundPicker" destination="dWh-Lu-ijJ" id="WQk-6H-NrL"/>
+                        <outlet property="durationPicker" destination="Zkq-9L-Ze1" id="DvC-ll-V9c"/>
+                        <outlet property="pauseButton" destination="uuL-vz-Jwf" id="PBn-2i-Mum"/>
+                        <outlet property="progressView" destination="WO1-C6-i4R" id="T50-28-nth"/>
+                        <outlet property="setMusicLabel" destination="sC6-Q8-EFg" id="lh5-7p-W8z"/>
+                        <outlet property="setTimeLabel" destination="6f6-wY-OD2" id="bml-ot-uJt"/>
+                        <outlet property="startButton" destination="hT9-Zs-nHj" id="F6J-l0-MDP"/>
+                        <outlet property="stopButton" destination="GQm-aK-8wl" id="nE7-rA-ttq"/>
+                        <outlet property="timeLabel" destination="mhJ-FL-Ou2" id="T8t-uh-wdf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OVX-fj-Azx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754.9618320610684" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2541.2213740458014" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1023" height="1023"/>
+        <image name="Meditation" width="1022" height="1064"/>
         <image name="shape1" width="1428" height="1200"/>
     </resources>
 </document>

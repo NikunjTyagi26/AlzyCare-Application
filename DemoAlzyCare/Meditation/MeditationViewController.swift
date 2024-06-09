@@ -28,6 +28,7 @@ class MeditationViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
 
+            // Create a CAGradientLayer
             // Configure the duration picker for countdown timer mode
             durationPicker.datePickerMode = .countDownTimer
             durationPicker.countDownDuration = 60
@@ -39,6 +40,16 @@ class MeditationViewController: UIViewController {
             // Set up the picker view for background sound selection
             backgroundSoundPicker.dataSource = self
             backgroundSoundPicker.delegate = self
+            
+            let gradient = CAGradientLayer()
+            gradient.frame = view.bounds
+            gradient.colors = [
+                UIColor(red: 204.0/255.0, green: 187.0/255.0, blue: 221.0/255.0, alpha: 1.0).cgColor, // Your specified color
+                UIColor.secondarySystemBackground.cgColor,
+                UIColor.systemBackground.cgColor
+            ]
+            gradient.locations = [0.0, 0.5, 1.0] // This means colors are at the start, middle, and end of the gradient
+            view.layer.insertSublayer(gradient, at: 0)
         }
 
         @IBAction func startButtonTapped(_ sender: UIButton) {
@@ -107,32 +118,35 @@ class MeditationViewController: UIViewController {
             isPaused = false
         }
 
-        func updateTimeLabel() {
-            guard let session = meditationSession else { return }
-            let remainingTime = session.remainingTime
-            
-            if remainingTime > 0 {
-                timeLabel.text = formatTime(remainingTime)
-                let progress = 1 - CGFloat(remainingTime / session.duration)
-                progressView.progress = progress
-            } else {
-                timeLabel.text = "Session Complete"
-                timer?.invalidate()
-                startButton.isEnabled = true
-                pauseButton.isEnabled = false
-                stopButton.isEnabled = false
-                durationPicker.isEnabled = true
-                progressView.progress = 1
-                pauseButton.setTitle("Pause", for: .normal)
-                isPaused = false
+    func updateTimeLabel() {
+        guard let session = meditationSession else { return }
+        let remainingTime = session.remainingTime
+        
+        if remainingTime > 0 {
+            timeLabel.text = formatTime(remainingTime)
+            let progress = 1 - CGFloat(remainingTime / session.duration)
+            progressView.progress = progress
+        } else {
+            timeLabel.text = "Session Complete"
+            timer?.invalidate()
+            startButton.isEnabled = true
+            pauseButton.isEnabled = false
+            stopButton.isEnabled = false
+            durationPicker.isEnabled = true
+            progressView.progress = 1
+            pauseButton.setTitle("Pause", for: .normal)
+            isPaused = false
 
-                // Play completion sound
-                playSound()
-                
-                // Stop background sound
-                backgroundAudioPlayer?.stop()
-            }
+            // Play completion sound
+            playSound()
+
+            // Stop background sound if it's currently playing
+            backgroundAudioPlayer?.stop()
+
+            // Restart background sound for the next session
+            playBackgroundSound()
         }
+    }
 
         func formatTime(_ interval: TimeInterval) -> String {
             let minutes = Int(interval) / 60
@@ -190,4 +204,5 @@ class MeditationViewController: UIViewController {
             selectedBackgroundSound = backgroundSounds[row]
             print("Selected background sound: \(selectedBackgroundSound ?? "None")")
         }
+        
     }
