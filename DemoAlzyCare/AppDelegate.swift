@@ -5,9 +5,9 @@
 //  Created by Batch-2 on 03/06/24.
 //
 
-
 import UIKit
 
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?

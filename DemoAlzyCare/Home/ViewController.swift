@@ -7,70 +7,81 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource{
-   
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        sugestedActivity.count
+    }
     
-    //   collectionViews Outlets
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SuggestedCell", for: indexPath) as? SuggestedGamesCollectionViewCell
+        
+        cell?.suggestedImageView.image = UIImage(named: sugestedActivity[indexPath.row].image)
+        cell?.suggestedLabel.text = sugestedActivity[indexPath.row].name
+        
+        return cell!
+    }
     
-    @IBOutlet var suggestedCollectionView: UICollectionView!
+
+
     
-    //    ViewDidLoad
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var quoteLabel: UILabel!
+    
+    let alzheimerQuotesDataModel = AlzheimerQuotesDataModel()
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            print("ViewDidLoad called")
+        super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        let homeNib = UINib(nibName: "SuggestedGames", bundle: nil)
+                collectionView.register(homeNib, forCellWithReuseIdentifier: "SuggestedCell")
 
-            // Check if the suggestedCollectionView outlet is connected
-            guard let suggestedCollectionView = suggestedCollectionView else {
-                print("Error: suggestedCollectionView is not connected")
-                return
-            }
-            
-            let suggestedNib = UINib(nibName: "Suggested", bundle: nil)
-            suggestedCollectionView.register(suggestedNib, forCellWithReuseIdentifier: "SuggestedCell")
-            
-            suggestedCollectionView.dataSource = self
-            suggestedCollectionView.setCollectionViewLayout(generateLayout(), animated: true)
-            
-            print("View setup completed")
-        }
-
-        // DataSource methods
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            print("Number of items in section: \(SuggestedDataModel.suggestedGames.count)")
-            return SuggestedDataModel.suggestedGames.count
-        }
-
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = suggestedCollectionView.dequeueReusableCell(withReuseIdentifier: "SuggestedCell", for: indexPath) as? SuggestedCollectionViewCell else {
-                fatalError("Unable to dequeue SuggestedCollectionViewCell")
-            }
-            
-            let game = SuggestedDataModel.suggestedGames[indexPath.row]
-            cell.suggestedImageView.image = UIImage(named: game.gameImage)
-            cell.suggestedTextLabel.text = game.gameName
-
-            print("Configured cell at index: \(indexPath.row) with game: \(game.gameName)")
-
-            return cell
-        }
-
-        // Layout generation
-        func generateLayout() -> UICollectionViewLayout {
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
-            
-            let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .groupPagingCentered
-            section.interGroupSpacing = 0 // No space between groups
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0) // No space from left and right
-            
-            print("Layout generated")
-            
-            return UICollectionViewCompositionalLayout(section: section)
-        }
+        
+        displayRandomQuote()
+        addHorizontalLine1()
+        addHorizontalLine2()
+        
     }
+    func displayRandomQuote() {
+        let randomQuote = alzheimerQuotesDataModel.getRandomQuote()
+        quoteLabel.text = randomQuote.quote
+    }
+    func addHorizontalLine1() {
+        // Create the horizontal line view
+        let horizontalLine = UIView()
+        horizontalLine.backgroundColor = UIColor.gray
+        
+        // Add the horizontal line to the main view
+        view.addSubview(horizontalLine)
+        
+        // Set the constraints
+        horizontalLine.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            horizontalLine.heightAnchor.constraint(equalToConstant: 1),
+            horizontalLine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            horizontalLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            horizontalLine.topAnchor.constraint(equalTo: quoteLabel.bottomAnchor, constant: 200)
+        ])
+    }
+    func addHorizontalLine2() {
+        // Create the horizontal line view
+        let horizontalLine = UIView()
+        horizontalLine.backgroundColor = UIColor.gray
+        
+        // Add the horizontal line to the main view
+        view.addSubview(horizontalLine)
+        
+        // Set the constraints
+        horizontalLine.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            horizontalLine.heightAnchor.constraint(equalToConstant: 1),
+            horizontalLine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            horizontalLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            horizontalLine.topAnchor.constraint(equalTo: quoteLabel.bottomAnchor, constant: 370)
+        ])
+    }
+    
+    
+}
