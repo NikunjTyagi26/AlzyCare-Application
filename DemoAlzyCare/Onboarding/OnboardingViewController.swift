@@ -1,3 +1,11 @@
+//
+//  OnboardingContentViewController.swift
+//  OnboardingScreens
+//
+//  Created by Tanisha Rastogi on 05/06/24.
+//
+
+
 import UIKit
 
 class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {

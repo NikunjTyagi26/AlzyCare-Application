@@ -79,6 +79,7 @@
 		F4483A252C125CB600099A06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4483A242C125CB600099A06 /* ProfileViewController.swift */; };
 		F470F4C82C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */; };
 		F470F4D22C14635300E3B9AB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F470F4D12C14635300E3B9AB /* Login.storyboard */; };
+		FD8B1C1A2C159522006363B9 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B1C192C159522006363B9 /* FullScreenImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		F4483A242C125CB600099A06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F470F4C72C1445C700E3B9AB /* PuzzleAlzheimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleAlzheimerViewController.swift; sourceTree = "<group>"; };
 		F470F4D12C14635300E3B9AB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FD8B1C192C159522006363B9 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				0558334A2C0DB89B00C14EE9 /* EventTableViewCell.swift */,
 				0558334C2C0DB8CE00C14EE9 /* EventsListViewController.swift */,
 				0558334E2C0DB8FF00C14EE9 /* EventDetailViewController.swift */,
+				FD8B1C192C159522006363B9 /* FullScreenImageViewController.swift */,
 			);
 			name = MemoryLane;
 			path = ../MemoryLane;
@@ -487,6 +490,7 @@
 				082404632C1224E700252472 /* PlannerDataModel.swift in Sources */,
 				05D3B0432C0D9D9C003E1ADE /* HomeDataModel.swift in Sources */,
 				08B370A52C156C64005C07F4 /* WinView.swift in Sources */,
+				FD8B1C1A2C159522006363B9 /* FullScreenImageViewController.swift in Sources */,
 				B0FC22522C11CFA100A61A0A /* MeditationViewController.swift in Sources */,
 				B072F03D2C11C1970027F277 /* ResultViewController.swift in Sources */,
 				08B370AB2C15748A005C07F4 /* Grid.swift in Sources */,

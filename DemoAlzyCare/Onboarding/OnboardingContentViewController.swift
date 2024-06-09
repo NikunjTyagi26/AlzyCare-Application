@@ -124,3 +124,4 @@ class OnboardingContentViewController: UIViewController {
         return NSAttributedString(string: text, attributes: attributes)
     }
 }
+

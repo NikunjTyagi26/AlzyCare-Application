@@ -4,7 +4,7 @@
 
 import UIKit
 
-class EventDetailViewController: UIViewController, UIScrollViewDelegate {
+class EventDetailViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
     private var event: Event
 
     init(event: Event) {
@@ -19,7 +19,6 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //title = event.name
         view.backgroundColor = .white
 
         setupUI()
@@ -37,28 +36,27 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
         eventDateLabel.text = DateFormatter.localizedString(from: event.date, dateStyle: .long, timeStyle: .none)
         view.addSubview(eventDateLabel)
 
-        // Horizontal scroll view to contain the images
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         view.addSubview(scrollView)
 
-        // Array to keep track of image views
         var imageViews: [UIImageView] = []
 
-        // Add images to the horizontal scroll view
-        for imageData in event.photos {
+        for (index, imageData) in event.photos.enumerated() {
             if let image = Event.dataToImage(imageData) {
                 let eventImageView = UIImageView()
                 eventImageView.contentMode = .scaleAspectFill
                 eventImageView.clipsToBounds = true
                 eventImageView.image = image
+                eventImageView.isUserInteractionEnabled = true // Enable user interaction
+                eventImageView.tag = index // Set tag to the current index
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                eventImageView.addGestureRecognizer(tapGestureRecognizer)
                 scrollView.addSubview(eventImageView)
                 imageViews.append(eventImageView)
             }
         }
 
-
-        // Activate constraints for image views
         for (index, imageView) in imageViews.enumerated() {
             imageView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -66,24 +64,22 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
                 imageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 imageView.widthAnchor.constraint(equalToConstant: 200),
                 imageView.heightAnchor.constraint(equalToConstant: 200),
-                imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: CGFloat(index * 220) + 20) // Adjust spacing between images
+                imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: CGFloat(index * 220) + 20)
             ])
         }
 
-        // Description Label
         let descriptionLabel = UILabel()
         descriptionLabel.font = UIFont.systemFont(ofSize: 16)
-        descriptionLabel.numberOfLines = 0 // Allow multiple lines for description
-        descriptionLabel.text = event.description // Set the description text
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.text = event.description
         view.addSubview(descriptionLabel)
 
-        // Constraints for Description Label
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20), // Place below the scroll view
+            descriptionLabel.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -20) // Ensure a margin from the bottom
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -20)
         ])
 
         eventNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -99,15 +95,23 @@ class EventDetailViewController: UIViewController, UIScrollViewDelegate {
             eventDateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             eventDateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
 
-            scrollView.topAnchor.constraint(equalTo: eventDateLabel.bottomAnchor, constant: 50), // Adjust vertical spacing between date label and images
-            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            scrollView.heightAnchor.constraint(equalToConstant: 200), // Set the height of the scroll view
-            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor) // Occupy full width
+            scrollView.topAnchor.constraint(equalTo: eventDateLabel.bottomAnchor, constant: 50),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollView.heightAnchor.constraint(equalToConstant: 200),
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
 
-        // Set content size of scroll view to enable scrolling
         let contentWidth = CGFloat(event.photos.count) * 220 + 20
         scrollView.contentSize = CGSize(width: contentWidth, height: 200)
     }
-}
 
+    @objc private func imageTapped(_ sender: UITapGestureRecognizer) {
+        if let tappedImageView = sender.view as? UIImageView {
+            let index = tappedImageView.tag // Get index from tag
+            let fullScreenVC = FullScreenImageViewController(images: event.photos, initialIndex: index)
+            let navigationController = UINavigationController(rootViewController: fullScreenVC)
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true, completion: nil)
+        }
+    }
+}

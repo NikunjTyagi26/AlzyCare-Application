@@ -73,7 +73,7 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     
     private func setupEmptyLabel() {
         emptyLabel = UILabel()
-        emptyLabel.text = "No memories yet. Tap '+' to add a new memory."
+        emptyLabel.text = "No memories yet. Tap on '+' to add a new memory."
         emptyLabel.textColor = .gray
         emptyLabel.textAlignment = .center
         emptyLabel.numberOfLines = 0
