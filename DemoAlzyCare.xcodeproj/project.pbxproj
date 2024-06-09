@@ -41,7 +41,6 @@
 		08B3704D2C1425B7005C07F4 /* PuzzleNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */; };
 		08B370692C14770F005C07F4 /* RoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B370682C14770F005C07F4 /* RoundTableViewController.swift */; };
 		08B3706B2C14C359005C07F4 /* RoundTableNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3706A2C14C359005C07F4 /* RoundTableNViewController.swift */; };
-		08B370802C156962005C07F4 /* iMemoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3707F2C156962005C07F4 /* iMemoryApp.swift */; };
 		08B370852C1569B2005C07F4 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B370842C1569B2005C07F4 /* GameButton.swift */; };
 		08B370872C1569C3005C07F4 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B370862C1569C3005C07F4 /* Cardify.swift */; };
 		08B370892C156A04005C07F4 /* FunctionButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B370882C156A04005C07F4 /* FunctionButotn.swift */; };
@@ -119,7 +118,6 @@
 		08B3704C2C1425B7005C07F4 /* PuzzleNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleNormalViewController.swift; sourceTree = "<group>"; };
 		08B370682C14770F005C07F4 /* RoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTableViewController.swift; sourceTree = "<group>"; };
 		08B3706A2C14C359005C07F4 /* RoundTableNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTableNViewController.swift; sourceTree = "<group>"; };
-		08B3707F2C156962005C07F4 /* iMemoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iMemoryApp.swift; path = ../../../iMemoryApp.swift; sourceTree = "<group>"; };
 		08B370842C1569B2005C07F4 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 		08B370862C1569C3005C07F4 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		08B370882C156A04005C07F4 /* FunctionButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButotn.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				08B3706C2C14C38C005C07F4 /* Flip Memory Game */,
-				08B370612C1467B5005C07F4 /* Game */,
 				08B3704B2C142586005C07F4 /* GamesViewController */,
 				05D3B0152C0D91C6003E1ADE /* DemoAlzyCare */,
 				05D3B0142C0D91C6003E1ADE /* Products */,
@@ -297,13 +294,6 @@
 			path = GamesViewController;
 			sourceTree = "<group>";
 		};
-		08B370612C1467B5005C07F4 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
 		08B3706C2C14C38C005C07F4 /* Flip Memory Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +302,6 @@
 				08B370902C156A6F005C07F4 /* Model */,
 				08B3708B2C156A2C005C07F4 /* View Model */,
 				08B370812C156986005C07F4 /* Modifier */,
-				08B3707F2C156962005C07F4 /* iMemoryApp.swift */,
 			);
 			path = "Flip Memory Game";
 			sourceTree = "<group>";
@@ -537,7 +526,6 @@
 				08B3709C2C156BCC005C07F4 /* HowToPlayView.swift in Sources */,
 				08B370982C156B2A005C07F4 /* HomeView.swift in Sources */,
 				082404652C12251700252472 /* Calendar.swift in Sources */,
-				08B370802C156962005C07F4 /* iMemoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,6 @@
+//
+// Created by Tanisha Rastogi on 21/05/20224
+
 import UIKit
 
 struct Event: Codable {
