@@ -13,6 +13,7 @@ import UIKit
 class PlannerViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
     
+    @IBOutlet var activityProgressView: UIProgressView!
     
     var count = 0
     var dayCount = 0
@@ -146,7 +147,21 @@ class PlannerViewController: UIViewController,UICollectionViewDataSource,UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.barTintColor = UIColor.white
-
+        let gradientLayer = CAGradientLayer()
+              gradientLayer.frame = view.bounds
+              
+              // Define your gradient colors
+              let topColor = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 250.0/255.0, alpha: 1.0).cgColor // Light Lavender
+              let middleColor = UIColor.white.withAlphaComponent(0.8).cgColor // Slightly transparent white
+              let bottomColor = UIColor.white.withAlphaComponent(0.2).cgColor // More transparent white
+              
+              gradientLayer.colors = [topColor, middleColor, bottomColor]
+              
+              // Define the gradient direction (from top to bottom)
+              gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+              gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+              
+              view.layer.insertSublayer(gradientLayer, at: 0)
             // Set the tab bar's tint color
             self.tabBarController?.tabBar.tintColor = UIColor.black
         let calendarView = HorizontalCalendarView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 60))
@@ -177,6 +192,15 @@ override func viewWillAppear(_ animated: Bool) {
     print(count)
     print(dayCount)
     print(userResult.memoryScore)
+    
+    if dayCount == 14{
+        let progress = Float(countActivities + 1) / Float(2)
+        activityProgressView.setProgress(progress, animated: true)
+    }else{
+        let progress = Float(countActivities + 1) / Float(5)
+        activityProgressView.setProgress(progress, animated: true)
+    }
+  
     
     let dateFormatter = DateFormatter()
        dateFormatter.dateFormat = "dd"

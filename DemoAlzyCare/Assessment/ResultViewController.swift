@@ -31,6 +31,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var continueToPlannerButton: UIButton!
     
+    @IBOutlet var exitButtonTapped: UIBarButtonItem!
     
     
     let maxTotalScore = 22
@@ -46,38 +47,11 @@ class ResultViewController: UIViewController {
     
     func updateUI() {
         // Calculate percentages
-        let totalPercentage = calculatePercentage(score: userScore.totalScore!, maxScore: maxTotalScore)
-        let memoryPercentage = calculatePercentage(score: userScore.memoryScore!, maxScore: maxMemoryScore)
-        
-        if(userScore.executiveFunctionScore! > 4){
-            userResult.memoryScore = .normal
-        }else{
-            userResult.memoryScore = .alzheimer
-        }
-        
-        let logicPercentage = calculatePercentage(score: userScore.logicScore!, maxScore: maxLogicScore)
-        
-        if(userScore.executiveFunctionScore! > 2){
-            userResult.logicScore = .normal
-        }else{
-            userResult.logicScore = .alzheimer
-        }
-        
-        let reasoningPercentage = calculatePercentage(score: userScore.reasoningScore!, maxScore: maxReasoningScore)
-        
-        if(userScore.executiveFunctionScore! > 2){
-            userResult.reasoningScore = .normal
-        }else{
-            userResult.reasoningScore = .alzheimer
-        }
-        
-        let executivePercentage = calculatePercentage(score: userScore.executiveFunctionScore!, maxScore: maxExecutiveFunctionScore)
-        
-        if(userScore.executiveFunctionScore! > 3){
-            userResult.executiveScore = .normal
-        }else{
-            userResult.executiveScore = .alzheimer
-        }
+        let totalPercentage = calculatePercentage(score: userScore.totalScore, maxScore: maxTotalScore)
+        let memoryPercentage = calculatePercentage(score: userScore.memoryScore, maxScore: maxMemoryScore)
+        let logicPercentage = calculatePercentage(score: userScore.logicScore, maxScore: maxLogicScore)
+        let reasoningPercentage = calculatePercentage(score: userScore.reasoningScore, maxScore: maxReasoningScore)
+        let executivePercentage = calculatePercentage(score: userScore.executiveFunctionScore, maxScore: maxExecutiveFunctionScore)
         
         // Update labels to show percentages
         totalLabel.text = "\(totalPercentage)%"
@@ -115,12 +89,6 @@ class ResultViewController: UIViewController {
     func calculatePercentage(score: Int, maxScore: Int) -> Int {
         return Int((Double(score) / Double(maxScore)) * 100)
     }
-    
-    
-    
-    
-    
-    
     @IBAction func exitButtonTapped(_ sender: UIBarButtonItem) {
         // Reset all scores
         userScore.totalScore = 0

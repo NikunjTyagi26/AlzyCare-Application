@@ -123,18 +123,18 @@ class SampleViewController: UIViewController {
         }
         
         func updateScore() {
-            userScore.totalScore! += 2
+            userScore.totalScore += 2
             print("score - \(userScore.totalScore)")
             
             switch CurrentCategoryType {
             case .executiveFunction:
-                userScore.executiveFunctionScore! += 2
+                userScore.executiveFunctionScore += 2
             case .logic:
-                userScore.logicScore! += 2
+                userScore.logicScore += 2
             case .memory:
-                userScore.memoryScore! += 2
+                userScore.memoryScore += 2
             case .reasoning:
-                userScore.reasoningScore! += 2
+                userScore.reasoningScore += 2
             default:
                 print("Hello")
             }

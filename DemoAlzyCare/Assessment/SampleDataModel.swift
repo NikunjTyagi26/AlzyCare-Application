@@ -7,6 +7,8 @@
 
 import Foundation
 
+var countActivities : Int = 0
+
 struct PersonalInfo {
     let userName: String
     let userFatherName: String
@@ -42,11 +44,9 @@ enum QuestionType {
 
 
 struct AssessmentScore {
-    var totalScore: Int?
-    var executiveFunctionScore: Int?
-    var logicScore: Int?
-    var memoryScore: Int?
-    var reasoningScore: Int?
+    var totalScore: Int = 0
+    var executiveFunctionScore: Int = 0
+    var logicScore: Int = 0
+    var memoryScore: Int = 0
+    var reasoningScore: Int = 0
 }
-
-

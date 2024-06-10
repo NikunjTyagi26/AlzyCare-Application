@@ -61,7 +61,10 @@ class CalendarCell: UICollectionViewCell {
     func configure(day: Int, isSelected: Bool) {
         dayLabel.text = String(format: "%02d", day)
         if isSelected {
-            contentView.backgroundColor = UIColor.systemPurple
+             let contentView = contentView 
+                let mediumPurpleColor = UIColor(red: 147.0/255.0, green: 112.0/255.0, blue: 219.0/255.0, alpha: 1.0)
+                contentView.backgroundColor = mediumPurpleColor
+
             dayLabel.textColor = .white
         } else {
             contentView.backgroundColor = UIColor.white
